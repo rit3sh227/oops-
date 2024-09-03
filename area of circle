@@ -1,0 +1,103 @@
+Skip to content
+Navigation Menu
+AmanDangi01
+/
+OOP-Lab
+
+Type / to search
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Commit
+Create area of circle.c++
+ main
+@AmanDangi01
+AmanDangi01 committed last week 
+1 parent 1673896
+commit fa1f886
+Showing 1 changed file with 52 additions and 0 deletions.
+ 52 changes: 52 additions & 0 deletions52  
+area of circle.c++
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+class Cir_de {
+private:
+    float radius;
+    const float PI = 3.14159;
+    static int count;
+
+public:
+
+    Cir_de() {
+        radius = 3.0; 
+        count++;
+    }
+
+
+    Cir_de(float r) {
+        radius = r;
+        count++;
+    }
+
+
+    float circle_area() {
+        return PI * radius * radius;
+    }
+
+
+    void display_area() {
+        cout << "The area of the circle with radius " << radius << " is: " << circle_area() << endl;
+    }
+
+
+    static int get_count() {
+        return count;
+    }
+};
+
+
+int Cir_de::count = 0;
+
+int main() {
+    Cir_de circle1; 
+    circle1.display_area();
+
+    Cir_de circle2(5.0); 
+    circle2.display_area();
+
+    cout << "Total Cir_de objects created: " << Cir_de::get_count() << endl;
+
+    return 0;
+}
+1 comment on commit fa1f886
+@AmanDangi01
+Owner
+Author
+AmanDangi01 commented on fa1f886 last week
+Uploading 11.JPG…
+
+@rit3sh227
+Comment
+ 
+Leave a comment
+ 
+Loading
+Footer
+© 2024 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact
+Manage cookies
+Do not share my personal information
+Create area of circle.c++ · AmanDangi01/OOP-Lab@fa1f886
